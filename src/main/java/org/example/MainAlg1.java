@@ -7,14 +7,16 @@ import java.util.Scanner;
 
 public class MainAlg1 {
     public static void main(String[] args) {
+        //Se utiliza un doble for ya que necesito recorrer el arreglo para identificar si
+        //algun numero sumado con otro que no sea si mismo es igual al numero buscado.
         Scanner sc = new Scanner(System.in);
         boolean exit = false;
         do {
-            List<Integer> array = new ArrayList<Integer>();
+            List<Integer> array = new ArrayList<Integer>(); //La lista permite ingresar tantos numeros como este desee
             boolean findSum = false;
             System.out.println("Ingrese la longitud del arreglo");
-            Long arrayLenght = sc.nextLong();
-            for (int i =0;i<=arrayLenght-1;i++){
+            Long arrayLength = sc.nextLong();
+            for (int i =0;i<=arrayLength-1;i++){
                 System.out.println("Ingrese el numero de la posicion: "+i);
                 Integer userInput = sc.nextInt();
                 array.add(userInput);
@@ -36,7 +38,7 @@ public class MainAlg1 {
                 exit=true;
             }
 
-        }while (!exit);
+        }while (!exit); //Utilizo un doWhile ya que le doy la posibilidad al usuario de comprobar tantos arreglos como este desease
 
     }
 }
